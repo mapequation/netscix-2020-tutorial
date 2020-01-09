@@ -1,0 +1,8 @@
+numpy == 1.16.2
+pandas == 0.24.2
+matplotlib == 3.0.3
+seaborn == 0.9.0
+infomap >= 1.0.0-beta.53
+scikit-learn == 0.20.3
+numba == 0.43.1
+mapequation >= 0.2.0

@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    notebook:
+      container_name: "netscix-tutorial"
+      user: root
+      build: .
+      ports:
+        - "8888:8888"
+      volumes:
+        - .:/home/jovyan/work
+      environment:
+        - NB_GID=1001
