@@ -148,14 +148,3 @@ def write_paths(filename, network, paths):
 
         f.write("*Paths\n")
         f.writelines(f"{' '.join(map(str, path))}\n" for path in paths)
-
-
-if __name__ == "__main__":
-    from shutil import copy
-
-    network = example_network(num_nodes=2)
-    paths = run(network, n=10000, steps=3, mu=0.222, self_links=False)
-
-    write_net("../output/simulation.net", network)
-    write_paths("../data/simulation.net", network, paths)
-    copy(f"../output/simulation.net", f"../../state-network-visualizer/dist/")

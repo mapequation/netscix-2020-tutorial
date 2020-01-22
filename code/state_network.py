@@ -782,32 +782,3 @@ class StateNetwork:
 
             phys_node.container.transfer_states_to_children(label_to_state_ids, preserve_labels=True)
             phys_node.container.transfer_states_to_children(unique_node_labels)
-
-
-if __name__ == '__main__':
-    from shutil import copy
-
-    net, _ = StateNetwork.from_paths("../data/simulation.net", markov_order=3)
-
-    net.write_state_network("../../state-network-visualizer/dist/toy_paths2.net")
-
-    for order in (2, 3):
-        net.aggregate(order)
-
-        if order == 2:
-            threshold = 1e-5
-        else:
-            threshold = 0.00012915496650148828
-
-        net.cluster_state_nodes(order, js_div_threshold=threshold, merge_dangling_with_shared_context=True)
-        net.write_clustered_network(f"../output/states_clustered_order{order}.net")
-        print(net)
-
-    files = (
-        # "states.net",
-        "states_clustered_order2.net",
-        "states_clustered_order3.net"
-    )
-
-    for file in files:
-        copy(f"../output/{file}", f"../../state-network-visualizer/dist/")
