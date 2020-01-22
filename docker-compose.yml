@@ -8,6 +8,6 @@ services:
       ports:
         - "8888:8888"
       volumes:
-        - .:/home/jovyan/work
+        - .:/home/jovyan
       environment:
         - NB_GID=1001

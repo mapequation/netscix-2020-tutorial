@@ -1,7 +1,12 @@
 # specific
-output
-data
-
+output/*
+data/*
+.cache
+.config
+.ipython
+.jupyter
+.local
+venv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
