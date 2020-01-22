@@ -1,3 +1,5 @@
+# Copyright 2019 Anton Eriksson
+# See LICENSE
 from collections import namedtuple, defaultdict
 from numpy import random
 

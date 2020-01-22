@@ -1,3 +1,5 @@
+# Copyright 2019 Anton Eriksson
+# See LICENSE
 import random
 import re
 from collections import defaultdict

@@ -1,3 +1,5 @@
+# Copyright 2019 Martin Rosvall
+# See LICENSE
 import random
 from heapq import heappush, heapreplace
 from math import fabs
